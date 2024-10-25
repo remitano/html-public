@@ -7509,12 +7509,23 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="L%E1%BA%A5y-b%E1%BA%A3n-build-file-model-t%E1%BB%AB-Keras">Lấy bản build file model từ Keras<a class="anchor-link" href="#L%E1%BA%A5y-b%E1%BA%A3n-build-file-model-t%E1%BB%AB-Keras">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vẽ chart để compare, model lấy từ file Keras</span>
@@ -7645,7 +7656,7 @@ a.anchor-link {
         <span class="n">result_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">btc_holdings</span><span class="p">)</span> <span class="c1"># Cho mục đích debug</span>
         <span class="n">result_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total_cash</span><span class="p">)</span>
         <span class="n">result_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">remaining_cash</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"result_array[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="n">result_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="c1"># print(f"result_array[{i}]: {result_array[i]}")</span>
 
     <span class="c1"># Tính toán Valuation cho phương pháp DCA</span>
     <span class="k">def</span> <span class="nf">calculate_dca_valuation</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">initial_cash</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">daily_investment</span><span class="o">=</span><span class="n">dca_daily_investment</span><span class="p">):</span>
@@ -7734,7 +7745,7 @@ a.anchor-link {
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tổng giá trị tài sản (DCA): </span><span class="si">{</span><span class="n">valuation_dca</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> USD"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tổng giá trị tài sản ALL IN BTC: </span><span class="si">{</span><span class="n">valuation_all_in_BTC</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> USD"</span><span class="p">)</span>
 
-<span class="n">render_chart_with_param</span><span class="p">(</span><span class="s1">'2024-06-12'</span><span class="p">,</span> <span class="s1">'2024-10-20'</span><span class="p">,</span> <span class="n">days_interval</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">rdca_buy_sell_btc</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">total_cash</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
+<span class="c1"># render_chart_with_param('2024-06-12', '2024-10-20', days_interval = 7, rdca_buy_sell_btc = 10, total_cash=1000000)</span>
 <span class="c1"># render_chart_with_param('2024-04-01', '2024-06-30', days_interval = 20, rdca_buy_sell_btc = 5, total_cash=1000000)</span>
 <span class="c1"># render_chart_with_param('2024-07-01', '2024-08-12', days_interval = 20, rdca_buy_sell_btc = 5, total_cash=1000000)</span>
 </pre></div>
@@ -7749,142 +7760,41 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre><span class="ansi-bold">10/10</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">0s</span> 9ms/step
-test_data['Date'] 295
-result_array[0]: ['2024-06-12', 'Hold', 68260.1, 4.394954006806318, 1000000.0, 700000.0]
-result_array[1]: ['2024-06-13', 'Buy', 66773.1, 14.39495400680632, 978594.703391879, 631739.9]
-result_array[2]: ['2024-06-14', 'Buy', 66034.8, 24.39495400680632, 960583.9088486538, 564966.8]
-result_array[3]: ['2024-06-15', 'Buy', 66223.0, 34.394954006806316, 967057.0391927346, 498932.00000000006]
-result_array[4]: ['2024-06-16', 'Buy', 66674.7, 44.394954006806316, 987110.2399176089, 432709.00000000006]
-result_array[5]: ['2024-06-17', 'Buy', 66498.8, 54.394954006806316, 977542.167507812, 366034.30000000005]
-result_array[6]: ['2024-06-18', 'Buy', 65159.9, 64.39495400680632, 891323.7635880989, 299535.50000000006]
-result_array[7]: ['2024-06-19', 'Buy', 64980.9, 74.39495400680632, 878007.0668208806, 234375.60000000006]
-result_array[8]: ['2024-06-20', 'Buy', 64854.3, 84.39495400680632, 867322.665643619, 169394.70000000007]
-result_array[9]: ['2024-06-21', 'Buy', 64128.5, 94.39495400680632, 798810.8080254787, 104540.40000000007]
-result_array[10]: ['2024-06-22', 'Hold', 64261.0, 94.39495400680632, 811318.1394313806, 104540.40000000007]
-result_array[11]: ['2024-06-23', 'Hold', 63196.2, 94.39495400680632, 710806.3924049329, 104540.40000000007]
-result_array[12]: ['2024-06-24', 'Hold', 60292.7, 94.39495400680632, 436730.6434461707, 104540.40000000007]
-result_array[13]: ['2024-06-25', 'Hold', 61809.4, 94.39495400680632, 579899.4701882943, 104540.40000000007]
-result_array[14]: ['2024-06-26', 'Hold', 60849.4, 94.39495400680632, 489280.31434176024, 104540.40000000007]
-result_array[15]: ['2024-06-27', 'Hold', 61685.3, 94.39495400680632, 568185.0563960498, 104540.40000000007]
-result_array[16]: ['2024-06-28', 'Hold', 60403.3, 94.39495400680632, 447170.72535932413, 104540.40000000007]
-result_array[17]: ['2024-06-29', 'Hold', 60973.4, 94.39495400680632, 500985.2886386043, 104540.40000000007]
-result_array[18]: ['2024-06-30', 'Hold', 62754.3, 94.39495400680632, 669093.2622293257, 104540.40000000007]
-result_array[19]: ['2024-07-01', 'Hold', 62890.1, 94.39495400680632, 681912.0969834496, 104540.40000000007]
-result_array[20]: ['2024-07-02', 'Hold', 62103.3, 94.39495400680632, 607642.1471708949, 104540.40000000007]
-result_array[21]: ['2024-07-03', 'Hold', 60199.3, 94.39495400680632, 427914.15474193566, 104540.40000000007]
-result_array[22]: ['2024-07-04', 'Hold', 57026.3, 94.39495400680632, 128398.96567833924, 104540.40000000007]
-result_array[23]: ['2024-07-05', 'Hold', 56641.8, 94.39495400680632, 92104.10586272221, 104540.40000000007]
-result_array[24]: ['2024-07-06', 'Hold', 58259.2, 94.39495400680632, 244778.5044733302, 104540.40000000007]
-result_array[25]: ['2024-07-07', 'Hold', 55861.1, 94.39495400680632, 18409.965269608103, 104540.40000000007]
-result_array[26]: ['2024-07-08', 'Buy', 56724.7, 104.39495400680632, 108565.44754988588, 48679.30000000007]
-result_array[27]: ['2024-07-09', 'Hold', 58039.4, 104.39495400680632, 245813.4935826346, 48679.30000000007]
-result_array[28]: ['2024-07-10', 'Hold', 57746.7, 104.39495400680632, 215257.09054484195, 48679.30000000007]
-result_array[29]: ['2024-07-11', 'Hold', 57337.3, 104.39495400680632, 172517.79637445605, 48679.30000000007]
-result_array[30]: ['2024-07-12', 'Hold', 57885.1, 104.39495400680632, 229705.3521793841, 48679.30000000007]
-result_array[31]: ['2024-07-13', 'Hold', 59209.8, 104.39495400680632, 367997.3477522009, 48679.30000000007]
-result_array[32]: ['2024-07-14', 'Hold', 60794.9, 104.39495400680632, 533473.7893483895, 48679.30000000007]
-result_array[33]: ['2024-07-15', 'Hold', 64782.4, 104.39495400680632, 949748.6684505297, 48679.30000000007]
-result_array[34]: ['2024-07-16', 'Hold', 65049.7, 104.39495400680632, 977653.4396565486, 48679.30000000007]
-result_array[35]: ['2024-07-17', 'Hold', 64089.2, 104.39495400680632, 877382.086333011, 48679.30000000007]
-result_array[36]: ['2024-07-18', 'Hold', 63980.5, 104.39495400680632, 866034.3548324715, 48679.30000000007]
-result_array[37]: ['2024-07-19', 'Hold', 66677.4, 104.39495400680632, 1147577.1062934268, 48679.30000000007]
-result_array[38]: ['2024-07-20', 'Hold', 67148.5, 104.39495400680632, 1196757.569126034, 48679.30000000007]
-result_array[39]: ['2024-07-21', 'Hold', 68158.7, 104.39495400680632, 1302217.3516637094, 48679.30000000007]
-result_array[40]: ['2024-07-22', 'Hold', 67553.6, 104.39495400680632, 1239047.964994192, 48679.30000000007]
-result_array[41]: ['2024-07-23', 'Hold', 65937.8, 104.39495400680632, 1070366.598309994, 48679.30000000007]
-result_array[42]: ['2024-07-24', 'Hold', 65370.5, 104.39495400680632, 1011143.3409019324, 48679.30000000007]
-result_array[43]: ['2024-07-25', 'Hold', 65799.3, 104.39495400680632, 1055907.8971800513, 48679.30000000007]
-result_array[44]: ['2024-07-26', 'Hold', 67908.6, 104.39495400680632, 1276108.173666608, 48679.30000000007]
-result_array[45]: ['2024-07-27', 'Hold', 67843.1, 104.39495400680632, 1269270.3041791623, 48679.30000000007]
-result_array[46]: ['2024-07-28', 'Hold', 68256.3, 104.39495400680632, 1312406.2991747744, 48679.30000000007]
-result_array[47]: ['2024-07-29', 'Hold', 66798.7, 104.39495400680632, 1160240.214214453, 48679.30000000007]
-result_array[48]: ['2024-07-30', 'Hold', 66184.9, 104.39495400680632, 1096162.5914450749, 48679.30000000007]
-result_array[49]: ['2024-07-31', 'Hold', 64626.0, 104.39495400680632, 933421.2976438651, 48679.30000000007]
-result_array[50]: ['2024-08-01', 'Hold', 65372.9, 104.39495400680632, 1011393.8887915489, 48679.30000000007]
-result_array[51]: ['2024-08-02', 'Hold', 61478.7, 104.39495400680632, 604859.0588982434, 48679.30000000007]
-result_array[52]: ['2024-08-03', 'Hold', 60696.7, 104.39495400680632, 523222.2048649208, 48679.30000000007]
-result_array[53]: ['2024-08-04', 'Hold', 58141.8, 104.39495400680632, 256503.536872932, 48679.30000000007]
-result_array[54]: ['2024-08-05', 'Hold', 53979.0, 104.39495400680632, -178071.77766660164, 48679.30000000007]
-result_array[55]: ['2024-08-06', 'Hold', 56057.8, 104.39495400680632, 38944.452722747636, 48679.30000000007]
-result_array[56]: ['2024-08-07', 'Hold', 55120.9, 104.39495400680632, -58863.179686229356, 48679.30000000007]
-result_array[57]: ['2024-08-08', 'Hold', 61699.7, 104.39495400680632, 627930.3437337476, 48679.30000000007]
-result_array[58]: ['2024-08-09', 'Buy', 60850.6, 114.39495400680632, 530797.5882865685, -13020.399999999929]
-result_array[59]: ['2024-08-10', 'Hold', 60931.7, 114.39495400680632, 540075.0190565203, -13020.399999999929]
-result_array[60]: ['2024-08-11', 'Hold', 58713.3, 114.39495400680632, 286301.2530878219, -13020.399999999929]
-result_array[61]: ['2024-08-12', 'Hold', 59350.0, 114.39495400680632, 359136.5203039551, -13020.399999999929]
-result_array[62]: ['2024-08-13', 'Hold', 60595.2, 114.39495400680632, 501581.11703323, -13020.399999999929]
-result_array[63]: ['2024-08-14', 'Hold', 58707.8, 114.39495400680632, 285672.0808407845, -13020.399999999929]
-result_array[64]: ['2024-08-15', 'Hold', 57534.6, 114.39495400680632, 151463.9207999988, -13020.399999999929]
-result_array[65]: ['2024-08-16', 'Hold', 58877.2, 114.39495400680632, 305050.5860495368, -13020.399999999929]
-result_array[66]: ['2024-08-17', 'Hold', 59483.1, 114.39495400680632, 374362.48868226097, -13020.399999999929]
-result_array[67]: ['2024-08-18', 'Hold', 58446.3, 114.39495400680632, 255757.80036800468, -13020.399999999929]
-result_array[68]: ['2024-08-19', 'Hold', 59470.9, 114.39495400680632, 372966.8702433783, -13020.399999999929]
-result_array[69]: ['2024-08-20', 'Hold', 59005.8, 114.39495400680632, 319761.77713481284, -13020.399999999929]
-result_array[70]: ['2024-08-21', 'Hold', 61158.1, 114.39495400680632, 565974.0366436616, -13020.399999999929]
-result_array[71]: ['2024-08-22', 'Hold', 60372.2, 114.39495400680632, 476071.0422897123, -13020.399999999929]
-result_array[72]: ['2024-08-23', 'Hold', 64053.1, 114.39495400680632, 897147.4284933659, -13020.399999999929]
-result_array[73]: ['2024-08-24', 'Buy', 64159.3, 124.39495400680632, 910358.1726088893, -77073.49999999993]
-result_array[74]: ['2024-08-25', 'Buy', 64273.2, 134.3949540068063, 925665.7578702638, -141232.79999999993]
-result_array[75]: ['2024-08-26', 'Buy', 62846.2, 144.3949540068063, 719614.1585025511, -205505.99999999994]
-result_array[76]: ['2024-08-27', 'Buy', 59450.9, 154.3949540068063, 195396.97116324236, -268352.19999999995]
-result_array[77]: ['2024-08-28', 'Buy', 59016.0, 164.3949540068063, 123901.60566568206, -327803.1]
-result_array[78]: ['2024-08-29', 'Hold', 59373.5, 164.3949540068063, 182672.80172311532, -327803.1]
-result_array[79]: ['2024-08-30', 'Buy', 59119.7, 174.3949540068063, 138411.36239618738, -387176.6]
-result_array[80]: ['2024-08-31', 'Hold', 58978.6, 174.3949540068063, 113804.23438582727, -387176.6]
-result_array[81]: ['2024-09-01', 'Hold', 57315.7, 174.3949540068063, -176197.1346320912, -387176.6]
-result_array[82]: ['2024-09-02', 'Hold', 59134.0, 174.3949540068063, 140905.2102384852, -387176.6]
-result_array[83]: ['2024-09-03', 'Buy', 57479.8, 184.3949540068063, -164120.92267957324, -446310.6]
-result_array[84]: ['2024-09-04', 'Hold', 57973.4, 184.3949540068063, -73103.57338181391, -446310.6]
-result_array[85]: ['2024-09-05', 'Buy', 56183.2, 194.3949540068063, -421109.42004479945, -504284.0]
-result_array[86]: ['2024-09-06', 'Buy', 53966.8, 204.3949540068063, -874130.3961054838, -560467.2]
-result_array[87]: ['2024-09-07', 'Buy', 54156.5, 214.3949540068063, -833459.6733303933, -614434.0]
-result_array[88]: ['2024-09-08', 'Buy', 54861.3, 224.3949540068063, -675306.1097463955, -668590.5]
-result_array[89]: ['2024-09-09', 'Buy', 57049.6, 234.3949540068063, -162379.6318933023, -723451.8]
-result_array[90]: ['2024-09-10', 'Buy', 57635.0, 244.3949540068063, -19310.82581771756, -780501.4]
-result_array[91]: ['2024-09-11', 'Buy', 57338.7, 254.3949540068063, -94688.050689935, -838136.4]
-result_array[92]: ['2024-09-12', 'Hold', 58134.5, 254.3949540068063, 107759.4537086822, -838136.4]
-result_array[93]: ['2024-09-13', 'Hold', 60511.6, 254.3949540068063, 712481.6988782611, -838136.4]
-result_array[94]: ['2024-09-14', 'Hold', 59995.4, 254.3949540068063, 581163.0236199484, -838136.4]
-result_array[95]: ['2024-09-15', 'Hold', 59138.5, 254.3949540068063, 363171.98753151577, -838136.4]
-result_array[96]: ['2024-09-16', 'Buy', 58213.1, 264.3949540068063, 118500.89709361683, -897274.9]
-result_array[97]: ['2024-09-17', 'Hold', 60309.1, 264.3949540068063, 672672.7206918828, -897274.9]
-result_array[98]: ['2024-09-18', 'Hold', 61757.6, 264.3949540068063, 1055648.8115707417, -897274.9]
-result_array[99]: ['2024-09-19', 'Hold', 62938.6, 264.3949540068063, 1367899.25225278, -897274.9]
-result_array[100]: ['2024-09-20', 'Hold', 63201.2, 264.3949540068063, 1437329.367174967, -897274.9]
-result_array[101]: ['2024-09-21', 'Hold', 63348.1, 264.3949540068063, 1476168.9859185673, -897274.9]
-result_array[102]: ['2024-09-22', 'Hold', 63572.7, 264.3949540068063, 1535552.0925884957, -897274.9]
-result_array[103]: ['2024-09-23', 'Hold', 63331.8, 264.3949540068063, 1471859.3481682576, -897274.9]
-result_array[104]: ['2024-09-24', 'Hold', 64256.8, 264.3949540068063, 1716424.6806245535, -897274.9]
-result_array[105]: ['2024-09-25', 'Hold', 63156.5, 264.3949540068063, 1425510.9127308638, -897274.9]
-result_array[106]: ['2024-09-26', 'Hold', 65175.7, 264.3949540068063, 1959377.2038614063, -897274.9]
-result_array[107]: ['2024-09-27', 'Hold', 65776.3, 264.3949540068063, 2118172.8132378957, -897274.9]
-result_array[108]: ['2024-09-28', 'Hold', 65866.5, 264.3949540068063, 2142021.238089309, -897274.9]
-result_array[109]: ['2024-09-29', 'Hold', 65607.1, 264.3949540068063, 2073437.1870199451, -897274.9]
-result_array[110]: ['2024-09-30', 'Hold', 63339.2, 264.3949540068063, 1473815.8708279068, -897274.9]
-result_array[111]: ['2024-10-01', 'Hold', 60835.5, 264.3949540068063, 811850.2244810666, -897274.9]
-result_array[112]: ['2024-10-02', 'Hold', 60645.7, 264.3949540068063, 761668.0622105739, -897274.9]
-result_array[113]: ['2024-10-03', 'Hold', 60751.2, 264.3949540068063, 789561.729858292, -897274.9]
-result_array[114]: ['2024-10-04', 'Hold', 62081.0, 264.3949540068063, 1141154.1396965438, -897274.9]
-result_array[115]: ['2024-10-05', 'Hold', 62061.4, 264.3949540068063, 1135971.9985980107, -897274.9]
-result_array[116]: ['2024-10-06', 'Hold', 62819.4, 264.3949540068063, 1336383.3737351699, -897274.9]
-result_array[117]: ['2024-10-07', 'Hold', 62245.6, 264.3949540068063, 1184673.5491260637, -897274.9]
-result_array[118]: ['2024-10-08', 'Hold', 62157.0, 264.3949540068063, 1161248.156201061, -897274.9]
-result_array[119]: ['2024-10-09', 'Hold', 60628.8, 264.3949540068063, 757199.7874878605, -897274.9]
-result_array[120]: ['2024-10-10', 'Hold', 60316.2, 264.3949540068063, 674549.9248653314, -897274.9]
-result_array[121]: ['2024-10-11', 'Hold', 62499.4, 264.3949540068063, 1251776.988452992, -897274.9]
-result_array[122]: ['2024-10-12', 'Hold', 63205.1, 264.3949540068063, 1438360.5074955944, -897274.9]
-result_array[123]: ['2024-10-13', 'Hold', 62870.9, 264.3949540068063, 1349999.7138665204, -897274.9]
-result_array[124]: ['2024-10-14', 'Hold', 66081.7, 264.3949540068063, 2198919.0321915727, -897274.9]
-result_array[125]: ['2024-10-15', 'Hold', 67077.5, 264.3949540068063, 2462203.527391551, -897274.9]
-result_array[126]: ['2024-10-16', 'Hold', 67617.9, 264.3949540068063, 2605082.560536828, -897274.9]
-result_array[127]: ['2024-10-17', 'Hold', 67418.4, 264.3949540068063, 2552335.76721247, -897274.9]
-result_array[128]: ['2024-10-18', 'Hold', 68423.1, 264.3949540068063, 2817973.3775031115, -897274.9]
-result_array[129]: ['2024-10-19', 'Hold', 68372.0, 264.3949540068063, 2804462.7953533623, -897274.9]
-result_array[130]: ['2024-10-20', 'Hold', 69030.5, 264.3949540068063, 2978566.8725668443, -897274.9]
+<pre><span class="ansi-bold">10/10</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">0s</span> 4ms/step 
 </pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="V%E1%BA%BD-chart-t%E1%BB%AB-th%C3%A1ng-6-%C4%91%E1%BA%BFn-th%C3%A1ng-12,-RDCA-m%E1%BB%97i-l%E1%BA%A7n-mua-b%C3%A1n-l%C3%A0-10-BTC-v%C3%A0-gi%E1%BA%A3-%C4%91%E1%BB%8Bnh-%C4%91ang-c%C3%B3-1-tri%E1%BB%87u-USD.">Vẽ chart từ tháng 6 đến tháng 12, RDCA mỗi lần mua bán là 10 BTC và giả định đang có 1 triệu USD.<a class="anchor-link" href="#V%E1%BA%BD-chart-t%E1%BB%AB-th%C3%A1ng-6-%C4%91%E1%BA%BFn-th%C3%A1ng-12,-RDCA-m%E1%BB%97i-l%E1%BA%A7n-mua-b%C3%A1n-l%C3%A0-10-BTC-v%C3%A0-gi%E1%BA%A3-%C4%91%E1%BB%8Bnh-%C4%91ang-c%C3%B3-1-tri%E1%BB%87u-USD.">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">render_chart_with_param</span><span class="p">(</span><span class="s1">'2024-06-12'</span><span class="p">,</span> <span class="s1">'2024-10-20'</span><span class="p">,</span> <span class="n">days_interval</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">rdca_buy_sell_btc</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">total_cash</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
@@ -7898,6 +7808,20 @@ result_array[130]: ['2024-10-20', 'Hold', 69030.5, 264.3949540068063, 2978566.87
 Tổng giá trị tài sản (DCA): 1242614.54 USD
 Tổng giá trị tài sản ALL IN BTC: 1001639.32 USD
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>
